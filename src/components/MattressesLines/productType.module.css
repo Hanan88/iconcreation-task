@@ -1,0 +1,42 @@
+.slickRightArrow {
+    box-shadow: -1px 3px 2px 0px #0000004a;
+    font-size: 45px;
+    color: #f26522;
+    position: absolute;
+    top: 25%;
+    right: -2%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.slickLeftArrow {
+    box-shadow: -1px 3px 2px 0px #0000004a;
+    font-size: 45px;
+    color: #f26522;
+    position: absolute;
+    top: 25%;
+    left: -2%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    z-index: 1;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.customDots {
+    bottom: 20px;
+}
+
+.customDots li button::before {
+    border: 3px solid #14325c;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    content: '';
+    color: #14325c;
+}
+.slick-slide{
+    margin: 0 40px;
+}
