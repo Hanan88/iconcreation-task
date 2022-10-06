@@ -1,0 +1,35 @@
+.slickRightArrow {
+    font-size: 60px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    display: block;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+.slickLeftArrow {
+    font-size: 60px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    display: block;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.customDots {
+    bottom: 20px;
+}
+
+.customDots li button::before {
+    border: 3px solid #14325c;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    content: '';
+    color: #14325c;
+}
