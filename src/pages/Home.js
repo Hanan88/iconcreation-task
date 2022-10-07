@@ -6,6 +6,7 @@ import MattressesLines from '../components/MattressesLines'
 import Message from '../components/Message'
 import Mission from '../components/Mission'
 import OurProducts from '../components/OurProducts'
+import FeaturedProducts from '../components/FeaturedProducts'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Message />
       <Mission />
       <OurProducts />
+      <FeaturedProducts />
     </div>
   )
 }
