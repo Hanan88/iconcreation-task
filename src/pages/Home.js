@@ -3,6 +3,7 @@ import Footer from '../components/layouts/Footer'
 import Header from '../components/layouts/Header'
 import SliderComponent from '../components/Slider'
 import MattressesLines from '../components/MattressesLines'
+import Message from '../components/Message'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Header />
       <SliderComponent />
       <MattressesLines />
+      <Message />
     </div>
   )
 }
