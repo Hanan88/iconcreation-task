@@ -1,0 +1,10 @@
+.details ul li {
+    color: rgb(148 163 184);
+    margin-bottom: 1rem;
+}
+
+.details h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
