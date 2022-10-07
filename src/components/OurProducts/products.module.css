@@ -1,0 +1,47 @@
+.slickRightArrow {
+    box-shadow: -1px 3px 2px 0px #0000004a;
+    font-size: 45px;
+    color: #fff;
+    position: absolute;
+    top: 46%;
+    right: -3%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    background: #f26522;
+    height: 100px;
+    padding-top: 25px;
+}
+
+.slickLeftArrow {
+    box-shadow: -1px 3px 2px 0px #0000004a;
+    font-size: 45px;
+    color: #fff;
+    position: absolute;
+    top: 46%;
+    left: -3%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    background: #f26522;
+    height: 100px;
+    padding-top: 25px;
+}
+
+/* the slides */
+.slick-slide {
+    margin: 0 10px;
+}
+/* the parent */
+.slick-list {
+    margin: 0 -10px;
+}
+/* .customDots li button::before {
+    border: 3px solid #14325c;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    content: '';
+    color: #14325c;
+}
+.slick-slide{
+    margin: 0 40px;
+}  */

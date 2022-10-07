@@ -15,7 +15,8 @@ module.exports = {
         'banner': 'inset 550px 0px 300px 0px rgb(255 255 255 / 72%)'
       },
       height: {
-        'full-img': '28rem'
+        'full-img': '28rem',
+        'box': '413px'
       }
     },
   },
