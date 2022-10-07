@@ -10,9 +10,9 @@ const Details = () => {
             <div className='flex justify-between items-center'>
                 <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 block rounded-xl py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-main-orange focus:ring-main-orange focus:ring-1 sm:text-sm" placeholder="Search..." type="text" name="search" />
                 <div className='flex justify-between w-1/4 text-slate-400 text-xl'>
-                    <AiFillInstagram />
-                    <AiOutlineTwitter />
-                    <FaFacebookF />
+                    <AiFillInstagram className='hover:text-main-orange cursor-pointer'/>
+                    <AiOutlineTwitter className='hover:text-main-orange cursor-pointer'/>
+                    <FaFacebookF className='hover:text-main-orange cursor-pointer'/>
                 </div>
             </div>
             <div className='text-right'>

@@ -71,31 +71,37 @@ const MattressesLines = () => {
             <h2 className='text-main-orange text-3xl text-center mt-16 mb-5'>Our Mattresses Lines</h2>
             <div className='w-100 bg-main-blue'>
                 <div className='text-white flex text-center h-20'>
-                    <button className='w-1/3 h-full bg-main-blue hover:bg-main-orange' onClick={() => filterByCategory('Bliss Line')}>Bliss line</button>
-                    <button className='w-1/3 h-full bg-main-blue hover:bg-main-orange' onClick={() => filterByCategory('Sleep Spa')}>Sleep Spa</button>
-                    <button className='w-1/3 h-full bg-main-blue hover:bg-main-orange' onClick={() => filterByCategory('Bliss Line')}>Essential</button>
+                    <button className='w-1/3 h-full bg-main-blue focus:bg-main-orange' onClick={() => filterByCategory('Bliss Line')}>Bliss line</button>
+                    <div className={styles.vline}></div>
+                    <button className='w-1/3 h-full bg-main-blue focus:bg-main-orange' onClick={() => filterByCategory('Sleep Spa')}>Sleep Spa</button>
+                    <div className={styles.vline}></div>
+                    <button className='w-1/3 h-full bg-main-blue focus:bg-main-orange' onClick={() => filterByCategory('Bliss Line')}>Essential</button>
                 </div>
             </div>
 
             <div className='mt-8'>
                 <Slider {...settings}>
-                    {filterProduct && filterProduct.map((item) => (<div key={item.id} className=' shadow-md'>
-                        <img src={pic} alt="" />
-                        <h2 className='text-center text-main-blue text-xl font-semibold my-2'>{item.title_english}</h2>
-                        <hr />
-                        <div className='flex justify-between my-2 px-4'>
-                            <span className='text-main-blue'>{item.imageCode}</span>
-                            <div className='price'>
-                                <del><span className='mr-2'>{item.beforePrice} EGP</span></del>
-                                <strong className='text-main-orange'>{item.afterPrice}EGP</strong>
+                    {filterProduct && filterProduct.map((item) => (
+                        <div key={item.id}>
+                            <div className='p-3 m-3 shadow-md'>
+                                <img src={pic} alt="" />
+                                <h2 className='text-center text-main-blue text-xl font-semibold my-2'>{item.title_english}</h2>
+                                <hr />
+                                <div className='flex justify-between my-2 px-4'>
+                                    <span className='text-main-blue'>{item.imageCode}</span>
+                                    <div className='price'>
+                                        <del className='text-slate-400'><span className='mr-2'>{item.beforePrice} EGP</span></del>
+                                        <strong className='text-main-orange'>{item.afterPrice}EGP</strong>
+                                    </div>
+                                </div>
+                                <p className='text-slate-400 my-5 px-4'>- {item.description_english.slice(0, 85)}</p>
+                                <div className='flex justify-around pt-5 pb-10'>
+                                    <button className='bg-main-orange text-white py-2 px-6 rounded'>Add To Cart</button>
+                                    <button className=' border-main-orange border  py-2 px-6 rounded text-main-orange'>More Details</button>
+                                </div>
                             </div>
                         </div>
-                        <p className='text-slate-400 my-5 px-4'>- {item.description_english}</p>
-                        <div className='flex justify-around pt-5 pb-10'>
-                            <button className='bg-main-orange text-white py-2 px-6 rounded'>Add To Cart</button>
-                            <button className=' border-main-orange border  py-2 px-6 rounded text-main-orange'>More Details</button>
-                        </div>
-                    </div>))
+                    ))
                     }
                 </Slider>
             </div>

@@ -17,7 +17,6 @@ const FeaturedProducts = () => {
         getFeature()
     }, [])
 
-    console.log(feature, "feature");
     return (
         <div className='container mx-auto px-20 py-5 mt-14 bg-slate-50'>
             <h2 className='text-main-orange text-3xl text-center mt-12 mb-14'>Featured Products</h2>

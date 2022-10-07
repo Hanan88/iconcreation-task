@@ -1,0 +1,8 @@
+ .navbar ul li{
+    cursor: pointer; 
+ }
+ .navbar ul li:hover{ 
+    text-decoration: underline;
+    text-underline-offset: 16px;
+    color: #F26522
+ }

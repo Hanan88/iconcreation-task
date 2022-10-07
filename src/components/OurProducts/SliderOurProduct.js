@@ -58,7 +58,7 @@ const SliderOurProduct = () => {
     useEffect(() => {
         getProducts()
     }, [])
-    console.log(products, "products");
+    
     return (
         < >
             <Slider {...settings}>
@@ -70,14 +70,14 @@ const SliderOurProduct = () => {
                             <div className='flex justify-between my-2 px-4 text-xs'>
                                 <span className='text-main-blue'>{item.imageCode}</span>
                                 <div className='price '>
-                                    <del><span className='mr-2'>{item.beforePrice} EGP</span></del>
+                                    <del className='text-slate-400'><span className='mr-2'>{item.beforePrice} EGP</span></del>
                                     <strong className='text-main-orange'>{item.afterPrice}EGP</strong>
                                 </div>
                             </div>
 
                             <p className='text-slate-400 mt-2 px-3 text-sm leading-4'>
                                 {item.description_english.length > 100 ?
-                                    item.description_english.slice(0, 50) :
+                                    item.description_english.slice(0, 40) :
                                     item.description_english}
                             </p>
 

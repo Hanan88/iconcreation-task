@@ -58,7 +58,6 @@ const SliderComponent = () => {
         getSliderData()
     }, [])
 
-    console.log(sliderData, "sliderData");
     return (
         <>
             <Slider {...settings}>

@@ -18,7 +18,6 @@ const OurOffer = () => {
         getOffers()
     }, [])
 
-    console.log(offers, "offers");
     return (
         <div className='container mx-auto px-20 py-5 mt-14 text-center shadow-offer' style={{ backgroundImage: `url(${pic})` }}>
             
@@ -31,10 +30,9 @@ const OurOffer = () => {
                         when an unknown printer took a galley of type and</p>
                 </div>
             ))}
-            <button className='bg-main-orange text-white py-2 px-6 rounded block m-auto'>Discover Now</button>
+            <button className='bg-main-orange text-white py-2 px-6 rounded block m-auto mb-12'>Discover Now</button>
         </div>
     )
 }
 
 export default OurOffer
-{/* <div className='layout top-0 left-0 absolute w-full h-full bg-slate-500 mix-blend-multiply bg-blue-400'></div> */}

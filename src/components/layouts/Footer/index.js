@@ -8,7 +8,7 @@ import './footer.css'
 const Footer = () => {
   return (
     <div className='container px-20 py-20 bg-main-blue flex justify-between '>
-      <img src={logo} className='w-48 h-fit pt-16' />
+      <img src={logo} alt='' className='w-48 h-fit pt-16' />
 
       <div className='details text-white flex w-1/2 justify-around '>
         <div><h2>COMPANY</h2>

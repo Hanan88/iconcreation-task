@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import mission from '../../../images/assests/mission/mission.png'
-import ReadMore from './ReadMore'
 
 const Details = () => {
   const [missionVision, setMissionVision] = useState('')
@@ -32,7 +31,6 @@ const Details = () => {
               item.english_description.slice(0, 270)
               : (item.english_description)}
           </p>
-          {console.log(item.english_description.length, "+++")}
         </section>
       ))}
     </div>

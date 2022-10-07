@@ -7,7 +7,7 @@ const Header = () => {
         <>
             <header>
                 <div className='container mx-auto px-20 py-3 flex justify-between items-end'>
-                    <div><img src={Logo} alt='' /></div>
+                    <div><img src={Logo} alt='' className='w-40' /></div>
                     <Navbar />
                     <Details />
                 </div>
