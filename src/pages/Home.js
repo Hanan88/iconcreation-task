@@ -7,6 +7,7 @@ import Message from '../components/Message'
 import Mission from '../components/Mission'
 import OurProducts from '../components/OurProducts'
 import FeaturedProducts from '../components/FeaturedProducts'
+import OurOffer from '../components/OurOffer'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Mission />
       <OurProducts />
       <FeaturedProducts />
+      <OurOffer />
     </div>
   )
 }
