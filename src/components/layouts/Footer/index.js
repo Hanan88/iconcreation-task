@@ -7,14 +7,11 @@ import { MdLocationPin } from 'react-icons/md';
 import './footer.css'
 const Footer = () => {
   return (
-    <div className='bg-main-blue '>
-      <div className='container px-20 py-20 flex justify-between 
-      lg:flex-row md:flex-col sm:flex-col'>
+    <div className='bg-main-blue'>
+      <div className='container px-20 py-20 flex justify-between  lg:flex-row md:flex-col sm:flex-col flex-col '>
         <img src={logo} alt='' className='w-48 h-fit pt-16' />
 
-        <div className='details text-white flex w-1/2 
-        lg:justify-around md:justify-start sm:justify-start
-        lg:w-1/2 md:w-full sm:w-full md:mt-8 md:pt-18'>
+        <div className='details text-white flex  justify-around lg:w-1/2 md:w-full sm:w-full  w-full '>
           <div><h2>COMPANY</h2>
             <ul>
               <li>About The Company</li>
@@ -33,7 +30,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div> <h2>Showrooms</h2>
+          <div className='w-1/4'> <h2>Showrooms</h2>
             <ul>
               <li className='flex'> <MdLocationPin className='-mt-4 text-6xl' />90 Avenue South Second
                 Sector Bldg 317, First Floor
@@ -52,9 +49,7 @@ const Footer = () => {
           </div>
         </div>
 
-
-
-        <div className='Newsletter lg:w-1/4 border rounded p-5 md:1/2 sm:1/2'>
+        <div className='Newsletter border rounded p-5 lg:w-1/4 md:w-1/2 sm:w-1/2 '>
           <h2 className='text-white text-2xl'>Newsletter</h2>
           <p className='text-slate-300 leading-5 my-3'>Subscribe Our Newletter to receive updates on new arrivals, special offers and other discount information.</p>
           <input type='text' className='mt-5 p-2 bg-slate-400' placeholder='Email' /><button className='bg-white py-2 px-5 rounded-r'>Send</button>
