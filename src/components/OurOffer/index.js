@@ -19,7 +19,7 @@ const OurOffer = () => {
     }, [])
 
     return (
-        <div className='py-5 mt-14 text-center shadow-offer bg-cover' style={{ backgroundImage: `url(${pic})` }}>
+        <div className='py-5 mt-14 text-center shadow-offer bg-cover bg-fixed' style={{ backgroundImage: `url(${pic})` }}>
             
             <h4 className='text-main-orange text-3xl text-center mt-12 mb-14 z-40'>Our Offers</h4>
             {offers && offers.map((item) => (
