@@ -21,7 +21,7 @@ const Details = () => {
   return (
     <div>
       {missionVision && missionVision.map((item) => (
-        <section key={item.id} className='flex pt-10 pl-24'>
+        <section key={item.id} className='flex flex-wrap pt-10 pl-24 lg:flex-nowrap md:flex-wrap sm:flex-wrap'>
           <div>
             <h2 className='text-5xl capitalize text-slate-300'>{item.type}</h2>
             <img src={mission} alt='' className='w-20 -mt-4 ml-10' />

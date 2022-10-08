@@ -13,7 +13,7 @@ function classNames(...classes) {
 }
 
 const Header = () => {
-    const cart = useSelector((state) => state.cart.value);
+    const cart = useSelector((state) => state.cart.value); 
     const navigation = [
         { name: 'Home', href: '#', current: true },
         { name: 'About', href: '#', current: false },
