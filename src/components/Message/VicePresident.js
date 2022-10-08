@@ -21,7 +21,7 @@ const VicePresident = () => {
     return (
         <>
             {vicepresidentMessage && vicepresidentMessage.map((item) => (
-                <section className='flex justify-start' key={item.id}>
+                <section className='lg:flex justify-start md:flow-root' key={item.id}>
                     <div className='bg-main-blue text-white rounded-2xl p-7 h-fit mt-14 -mr-9 ml-3'>
                         <strong className='text-xl mb-4 block ml-3'>Vice President</strong>
                         <p className='mb-3 text-[15px] leading-6'>  {item.english_description.slice(0,441)} </p>

@@ -43,7 +43,27 @@ const SliderOurProduct = () => {
         rows: 2,
         slidesPerRow: 2,
         nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+            {
+              breakpoint: 970,
+              settings: { 
+                infinite: true,
+                slidesToShow: 2, 
+                rows: 2,
+                slidesPerRow: 1,
+              }
+            },
+            {
+                breakpoint: 550,
+                settings: { 
+                    infinite: true,
+                    slidesToShow: 1, 
+                    rows: 2,
+                    slidesPerRow: 1,
+                  }
+              } 
+          ]
     };
 
     const getProducts = async () => {

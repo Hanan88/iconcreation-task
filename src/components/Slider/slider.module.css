@@ -22,7 +22,7 @@
 }
 
 .customDots {
-    bottom: 20px;
+    top: 85%;
 }
 
 .customDots li button::before {
@@ -33,3 +33,9 @@
     content: '';
     color: #14325c;
 }
+
+@media only screen and (min-width: 640px) { 
+     
+ }
+
+@media only screen and (min-width: 600px) {  }

@@ -21,7 +21,7 @@ const President = () => {
     return (
         <>
             {presidentMessage && presidentMessage.map((item) => (
-                <section className='flex justify-start' key={item.id}>
+                <section className='lg:flex justify-start md:flow-root' key={item.id}>
                     <img src={pic} alt='' className='max-h-96 z-10' />
                     <div className='bg-main-blue text-white rounded-2xl p-7 h-fit mt-9 -ml-8'>
                     <strong className='text-xl mb-4 block'>President</strong>

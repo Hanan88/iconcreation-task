@@ -22,8 +22,8 @@ const FeaturedProducts = () => {
             <h2 className='text-main-orange text-3xl text-center mt-12 mb-14'>Featured Products</h2>
 
             {feature && feature.map((item) => (
-                <section className='flex' key={item.id}>
-                    <div className='details w-1/2'>
+                <section className='flex lg:flex-nowrap md:flex-wrap sm:flex-wrap' key={item.id}>
+                    <div className='details lg:w-1/2 md:w-full sm:full'>
                         <h2 className='text-main-orange text-2xl font-medium mb-5'>{item.title_english}</h2>
                         <h4 className='text-main-blue text-base font-medium mb-5'>{item.category_english}</h4>
                         <p className='text-slate-400 mb-7'>{item.description_english.slice(0, 273)}</p>
