@@ -120,7 +120,7 @@ const MattressesLines = () => {
                                     <p className='text-slate-400 my-5 px-4'>- {item.description_english.slice(0, 85)}</p>
                                     <div className='flex justify-around pt-5 pb-10 '>
                                         <button className='bg-main-orange text-white py-2 px-6 rounded'>Add To Cart</button>
-                                        <button className=' border-main-orange border  py-2 px-6 rounded text-main-orang'>More Details</button>
+                                        <button className=' border-main-orange border  py-2 px-6 rounded text-main-orange'>More Details</button>
                                     </div>
                                 </div>
                             </div>
