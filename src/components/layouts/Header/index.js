@@ -1,4 +1,5 @@
 import React  from 'react'
+import { useSelector } from 'react-redux'
 import Logo from '../../../images/logo.jpg'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -12,6 +13,7 @@ function classNames(...classes) {
 }
 
 const Header = () => {
+    const cart = useSelector((state) => state.cart.value);
     const navigation = [
         { name: 'Home', href: '#', current: true },
         { name: 'About', href: '#', current: false },
@@ -80,7 +82,7 @@ const Header = () => {
                                     </div>
                                     <div className='text-right'>
                                         <button className='py-2 px-5 rounded mt-3 mx-5 text-white bg-main-blue hover:bg-main-orange'><GoPerson className='float-left text-2xl mr-2' />My Account</button>
-                                        <button className='py-2 px-5 rounded mt-3 text-white bg-main-blue hover:bg-main-orange'><MdShoppingBasket className='float-left text-2xl mr-2' /> (5)Items</button>
+                                        <button className='py-2 px-5 rounded mt-3 text-white bg-main-blue hover:bg-main-orange'><MdShoppingBasket className='float-left text-2xl mr-2' /> ({cart}) Items</button>
                                     </div>
 
                                 </div>

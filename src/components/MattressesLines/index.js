@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import axios from 'axios';
 import Slider from "react-slick";
 import pic from '../../images/assests/productImages/img1.png';
 import styles from './productType.module.css';
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
+import { addToCart } from '../../features/cart/cartSlice';
 
 const MattressesLines = () => {
     const [productType, setProductType] = useState('');
     const [filterProduct, setFilterProduct] = useState('');
+    const dispatch = useDispatch()
 
     function SampleNextArrow(props) {
         const { style, onClick } = props;
@@ -119,7 +122,7 @@ const MattressesLines = () => {
                                     </div>
                                     <p className='text-slate-400 my-5 px-4'>- {item.description_english.slice(0, 85)}</p>
                                     <div className='flex justify-around pt-5 pb-10 '>
-                                        <button className='bg-main-orange text-white py-2 px-6 rounded'>Add To Cart</button>
+                                        <button className='bg-main-orange text-white py-2 px-6 rounded' onClick={() => dispatch(addToCart())}>Add To Cart</button>
                                         <button className=' border-main-orange border  py-2 px-6 rounded text-main-orange'>More Details</button>
                                     </div>
                                 </div>
@@ -139,7 +142,7 @@ const MattressesLines = () => {
                                     </div>
                                     <p className='text-slate-400 my-5 px-4'>- {item.description_english.slice(0, 85)}</p>
                                     <div className='flex justify-around pt-5 pb-10'>
-                                        <button className='bg-main-orange text-white py-2 px-3 rounded lg:px-3 md:px-5 sm:px-5'>Add To Cart</button>
+                                        <button className='bg-main-orange text-white py-2 px-3 rounded lg:px-3 md:px-5 sm:px-5' onClick={() => dispatch(addToCart())}>Add To Cart</button>
                                         <button className=' border-main-orange border text-main-orange py-2 px-3 lg:px-3 rounded md:px-6 sm:px-3'>More Details</button>
                                     </div>
                                 </div>

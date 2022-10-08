@@ -1,13 +1,15 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import axios from 'axios';
 import Slider from "react-slick";
 import pic from '../../images/assests/productImages/Bliss-Fortune120.jpg'
 import styles from './products.module.css'
-// import './style.css'
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
+import { addToCart } from '../../features/cart/cartSlice';
 
 const SliderOurProduct = () => {
     const [products, setProducts] = useState('')
+    const dispatch = useDispatch()
 
     function SampleNextArrow(props) {
         const { style, onClick } = props;
@@ -102,7 +104,7 @@ const SliderOurProduct = () => {
                             </p>
 
                             <div className='flex justify-around pt-4 pb-5'>
-                                <button className='bg-main-orange text-white py-1 px-4 rounded'>Add To Cart</button>
+                                <button className='bg-main-orange text-white py-1 px-4 rounded' onClick={() => dispatch(addToCart())}>Add To Cart</button>
                                 <button className=' border-main-orange border  py-1 px-4 rounded text-main-orange'>More Details</button>
                             </div>
 
