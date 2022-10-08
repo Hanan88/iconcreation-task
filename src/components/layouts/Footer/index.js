@@ -30,7 +30,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className='w-1/4'> <h2>Showrooms</h2>
+          <div > <h2>Showrooms</h2>
             <ul>
               <li className='flex'> <MdLocationPin className='-mt-4 text-6xl' />90 Avenue South Second
                 Sector Bldg 317, First Floor
