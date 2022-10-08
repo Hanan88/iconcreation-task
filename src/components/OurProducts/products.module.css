@@ -25,23 +25,3 @@
     height: 100px;
     padding-top: 25px;
 }
-
-/* the slides */
-.slick-slide {
-    margin: 0 10px;
-}
-/* the parent */
-.slick-list {
-    margin: 0 -10px;
-}
-/* .customDots li button::before {
-    border: 3px solid #14325c;
-    border-radius: 50%;
-    width: 17px;
-    height: 17px;
-    content: '';
-    color: #14325c;
-}
-.slick-slide{
-    margin: 0 40px;
-}  */
