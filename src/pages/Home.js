@@ -8,6 +8,8 @@ import Mission from '../components/Mission'
 import OurProducts from '../components/OurProducts'
 import FeaturedProducts from '../components/FeaturedProducts'
 import OurOffer from '../components/OurOffer'
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
   return (
@@ -21,6 +23,7 @@ const Home = () => {
       <FeaturedProducts />
       <OurOffer />
       <Footer />
+      <ToastContainer autoClose={100000}/>
     </div>
   )
 }
