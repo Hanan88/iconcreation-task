@@ -3,8 +3,7 @@ import axios from 'axios';
 import Slider from "react-slick";
 import pic from '../../images/assests/productImages/img1.png';
 import styles from './productType.module.css';
-import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
-// import SliderFilter from './SliderFilter';
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'; 
 
 const MattressesLines = () => {
     const [productType, setProductType] = useState('');
@@ -81,7 +80,28 @@ const MattressesLines = () => {
 
             <div className='mt-8'>
                 <Slider {...settings}>
-                    {filterProduct && filterProduct.map((item) => (
+                    {
+                    filterProduct ? filterProduct.map((item) => (
+                        <div key={item.id}>
+                            <div className='p-3 m-3 shadow-md'>
+                                <img src={pic} alt="" />
+                                <h2 className='text-center text-main-blue text-xl font-semibold my-2'>{item.title_english}</h2>
+                                <hr />
+                                <div className='flex justify-between my-2 px-4'>
+                                    <span className='text-main-blue'>{item.imageCode}</span>
+                                    <div className='price'>
+                                        <del className='text-slate-400'><span className='mr-2'>{item.beforePrice} EGP</span></del>
+                                        <strong className='text-main-orange'>{item.afterPrice}EGP</strong>
+                                    </div>
+                                </div>
+                                <p className='text-slate-400 my-5 px-4'>- {item.description_english.slice(0, 85)}</p>
+                                <div className='flex justify-around pt-5 pb-10'>
+                                    <button className='bg-main-orange text-white py-2 px-6 rounded'>Add To Cart</button>
+                                    <button className=' border-main-orange border  py-2 px-6 rounded text-main-orange'>More Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    )) : productType && productType?.[0]?.products.map((item) => (
                         <div key={item.id}>
                             <div className='p-3 m-3 shadow-md'>
                                 <img src={pic} alt="" />
