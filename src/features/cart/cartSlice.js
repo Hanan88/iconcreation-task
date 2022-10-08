@@ -10,6 +10,7 @@ export const cartSlice = createSlice({
     reducers: {
         addToCart: (state) => {
             state.value += 1
+            localStorage.setItem('cart items', state.value)
         }
     },
 })
