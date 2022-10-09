@@ -11,6 +11,10 @@ const SliderOurProduct = () => {
     const [products, setProducts] = useState('')
     const dispatch = useDispatch()
 
+    const handleAddToCart = (item) => {
+        dispatch(addToCart(item))
+    }
+    
     function SampleNextArrow(props) {
         const { style, onClick } = props;
         return (
@@ -104,7 +108,8 @@ const SliderOurProduct = () => {
                             </p>
 
                             <div className='flex justify-around pt-4 pb-5'>
-                                <button className='bg-main-orange text-white py-1 px-4 rounded' onClick={() => dispatch(addToCart())}>Add To Cart</button>
+                                <button className='bg-main-orange text-white py-1 px-4 rounded' 
+                                onClick={() => handleAddToCart(handleAddToCart(item))}>Add To Cart</button>
                                 <button className=' border-main-orange border  py-1 px-4 rounded text-main-orange'>More Details</button>
                             </div>
 
