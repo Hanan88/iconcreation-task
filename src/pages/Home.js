@@ -23,7 +23,7 @@ const Home = () => {
       <FeaturedProducts />
       <OurOffer />
       <Footer />
-      <ToastContainer autoClose={100000}/>
+      <ToastContainer autoClose={5000}/>
     </div>
   )
 }
