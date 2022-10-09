@@ -1,5 +1,5 @@
-import React  from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import Logo from '../../../images/logo.jpg'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -7,15 +7,20 @@ import { FaFacebookF } from 'react-icons/fa';
 import { AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai';
 import { GoPerson } from 'react-icons/go';
 import { MdShoppingBasket } from 'react-icons/md';
+import { getQuantity } from '../../../features/cart/cartSlice'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
 const Header = () => {
-    const cart = useSelector((state) => state.cart.value); 
-    const items = localStorage.getItem('cart items')
-    
+    const cart = useSelector((state) => state.cart);
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(getQuantity())
+    }, [cart, dispatch])
+
     const navigation = [
         { name: 'Home', href: '#', current: true },
         { name: 'About', href: '#', current: false },
@@ -83,8 +88,10 @@ const Header = () => {
                                         </div>
                                     </div>
                                     <div className='text-right'>
-                                        <button className='py-2 px-5 rounded mt-3 mx-5 text-white bg-main-blue hover:bg-main-orange'><GoPerson className='float-left text-2xl mr-2' />My Account</button>
-                                        <button className='py-2 px-5 rounded mt-3 text-white bg-main-blue hover:bg-main-orange'><MdShoppingBasket className='float-left text-2xl mr-2' /> ({items}) Items</button>
+                                        <button className='py-2 px-5 rounded mt-3 mx-5 text-white bg-main-blue hover:bg-main-orange'>
+                                            <GoPerson className='float-left text-2xl mr-2' />My Account</button>
+                                        <button className='py-2 px-5 rounded mt-3 text-white bg-main-blue hover:bg-main-orange'>
+                                            <MdShoppingBasket className='float-left text-2xl mr-2' /> ({cart.cartTotalQuantity}) Items</button>
                                     </div>
 
                                 </div>

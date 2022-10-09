@@ -12,6 +12,10 @@ const MattressesLines = () => {
     const [filterProduct, setFilterProduct] = useState('');
     const dispatch = useDispatch()
 
+    const handleAddToCart = (item) => {
+        dispatch(addToCart(item))
+    }
+
     function SampleNextArrow(props) {
         const { style, onClick } = props;
         return (
@@ -122,7 +126,9 @@ const MattressesLines = () => {
                                     </div>
                                     <p className='text-slate-400 my-5 px-4'>- {item.description_english.slice(0, 85)}</p>
                                     <div className='flex justify-around pt-5 pb-10 '>
-                                        <button className='bg-main-orange text-white py-2 px-6 rounded' onClick={() => dispatch(addToCart())}>Add To Cart</button>
+                                        <button className='bg-main-orange text-white py-2 px-6 rounded'
+                                            onClick={() => handleAddToCart(handleAddToCart(item))}>Add To Cart
+                                        </button>
                                         <button className=' border-main-orange border  py-2 px-6 rounded text-main-orange'>More Details</button>
                                     </div>
                                 </div>
@@ -142,7 +148,9 @@ const MattressesLines = () => {
                                     </div>
                                     <p className='text-slate-400 my-5 px-4'>- {item.description_english.slice(0, 85)}</p>
                                     <div className='flex justify-around pt-5 pb-10'>
-                                        <button className='bg-main-orange text-white py-2 px-3 rounded lg:px-3 md:px-5 sm:px-5' onClick={() => dispatch(addToCart())}>Add To Cart</button>
+                                        <button className='bg-main-orange text-white py-2 px-3 rounded lg:px-3 md:px-5 sm:px-5'
+                                            onClick={() => handleAddToCart(handleAddToCart(item))}>Add To Cart
+                                        </button>
                                         <button className=' border-main-orange border text-main-orange py-2 px-3 lg:px-3 rounded md:px-6 sm:px-3'>More Details</button>
                                     </div>
                                 </div>
