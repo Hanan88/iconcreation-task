@@ -64,7 +64,7 @@ const SliderComponent = () => {
                 {sliderData && sliderData.map((item) => (
                     <div key={item.id}>
                         <div className='h-full-img bg-no-repeat bg-cover shadow-banner' style={{ backgroundImage: `url(${pic})` }}>
-                            <div className='ml-32 lg:pt-32 md:pt-20 sm:pt-20 lg:w-1/4 sm:w-1/2'>
+                            <div className='ml-32 lg:pt-32 md:pt-20 sm:pt-20 lg:w-1/4 sm:w-1/2 md:ml-20'>
                                 <h2 className='text-main-orange text-3xl md:text-xl'>{item.english_title}</h2>
                                 <p className='text-main-blue text-xl md:text-md my-8 font-semibold'>{item.english_description}</p>
                                 <button className='bg-main-orange text-white py-2 px-6 md:px-3 rounded'>Discover Now</button>
